@@ -1,35 +1,36 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>Blazor.AnchorLink</Title>
-	  <Description>Component similar to NavLink but create anchor links in Blazor applications.</Description>
-	  <Authors>Mika Berglund, Sergi Ortiz Gomez</Authors>
-	  <Company>DrUalcman</Company>
-	  <Copyright>Free</Copyright>
-	  <PackageReadmeFile>README.md</PackageReadmeFile>
-	  <PackageLicenseFile>License.txt</PackageLicenseFile>
-	  <PackageTags>webassembly, blazor, navlink, acnhorlink</PackageTags>
-	  <PackageReleaseNotes>First release</PackageReleaseNotes>
-	  <RepositoryUrl>https://github.com/drualcman/Blazor.AnchorLink</RepositoryUrl>
-	  <RepositoryType>Git</RepositoryType>
-	  <PackageId>Blazor.AnchorLink</PackageId>
-	  <Product>Blazor.AnchorLink</Product>
-	  <ErrorReport>send</ErrorReport>
-	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
-	  <Nullable>disable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>Blazor.AnchorLink</Title>
+		<Description>Component similar to NavLink but create anchor links in Blazor applications.</Description>
+		<Authors>Mika Berglund, Sergi Ortiz Gomez</Authors>
+		<Company>DrUalcman</Company>
+		<Copyright>Free</Copyright>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>License.txt</PackageLicenseFile>
+		<PackageTags>webassembly, blazor, navlink, acnhorlink</PackageTags>
+		<PackageReleaseNotes>First release</PackageReleaseNotes>
+		<RepositoryUrl>https://github.com/drualcman/Blazor.AnchorLink</RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+		<PackageId>Blazor.AnchorLink</PackageId>
+		<Product>Blazor.AnchorLink</Product>
+		<ErrorReport>send</ErrorReport>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<Nullable>disable</Nullable>
+		<Version>1.0.0</Version>
+	</PropertyGroup>
 
 
-  <ItemGroup>
-    <SupportedPlatform Include="browser" />
-  </ItemGroup>
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.5" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.5" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="..\README.md">
