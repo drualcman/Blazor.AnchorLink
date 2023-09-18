@@ -6,7 +6,7 @@ public partial class AnchorLink : IAsyncDisposable
     public AnchorLink()
     {
         Attributes = new Dictionary<string, object>();
-        ModuleTask = new Lazy<Task<IJSObjectReference>>(() => GetJSObjectReference());
+        ModuleTask = new Lazy<Task<IJSObjectReference>>(GetJSObjectReference);
     }
 
     private string HrefAbsolute;
@@ -17,7 +17,7 @@ public partial class AnchorLink : IAsyncDisposable
     private string CssClass { get; set; } = "";
 
     [Inject] IJSRuntime JSRuntime { get; set; }
-    [Inject] private NavigationManager NavigationManager { get; set; } = default!;
+    [Inject] private NavigationManager NavigationManager { get; set; } = default;
     /// <summary>
     /// Gets or sets a value representing the URL matching behavior.
     /// </summary>
@@ -211,5 +211,6 @@ public partial class AnchorLink : IAsyncDisposable
             IJSObjectReference module = await ModuleTask.Value;
             await module.DisposeAsync();
         }
+        NavigationManager.LocationChanged -= OnLocationChanged;
     }
 }
